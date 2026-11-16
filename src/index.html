@@ -13,7 +13,18 @@
         </header>
 
         <nav>
+            <form action="/buscar" method="get"> <!--barra de búsqueda por palabras clave-->
+                <label for="search-input">Buscar por palabras clave</label>
+                <input type="search" id="search-input" name="q" placeholder="Buscar feeds...">
+
+            <label for="feeds-guardados">Feeds guardados</label> <!--desplegable de los feeds guardados del usuario-->
+            <select id="feeds-guardados" name="feed"> <!--lista desplegable de los feeds guardados del usuario-->
+                <option value="">Selecciona un feed guardado</option>
+                <!-- acá van los feeds guardados del usuario con sus valores reales -->
+            </select>
+            <button type="submit">Buscar</button>
             
+            </form>      
         </nav>
 
         <main></main>
