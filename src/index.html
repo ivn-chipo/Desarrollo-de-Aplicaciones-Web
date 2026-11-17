@@ -3,14 +3,84 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>/////</title>
+        <title>TuFeedUADY</title>
         <link rel="stylesheet" href="CSS/style.css">
     </head>
 
     <body>
-        <header></header>
+        <header>
+            <h1>TuFeedUADY</h1> <!--aquí va el logo en grande transparentado-->
+        </header>
+
+        <nav>
+            <div class = "contenedor-nav">
+            <form action="/buscar" method="get"> <!--barra de búsqueda por palabras clave-->
+                <label for="search-input">Buscar por palabras clave</label>
+                <input type="search" id="search-input" name="q" placeholder="Buscar feeds...">
+
+            <label for="feeds-guardados">Feeds guardados</label> <!--desplegable de los feeds guardados del usuario-->
+            <select id="feeds-guardados" name="feed"> <!--lista desplegable de los feeds guardados del usuario-->
+                <option value="">Selecciona un feed guardado</option>
+                <!-- acá van los feeds guardados del usuario con sus valores reales -->
+            </select>
+            <button type="submit">Buscar</button>
+            </form>
+            
+            <form action="/perfil" method="get">
+                <label for="lista-usuario">Perfil</label>
+                <select id="lista-usuario" name="accion">
+                    <option value="" selected disabled>Selecciona una opción</option>
+                    <option value="preferencias">Preferencias</option>
+                    <option value="nombre">Cambiar nombre</option>
+                    <option value="anadir">Añadir feed</option>
+                    <option value="quitar">Quitar feed</option>
+                    <option value="apariencia">Modo claro / oscuro</option>
+                </select>
+                <button type="submit">Ir</button>
+            </form>
+            </div>
+        </nav>
+
         <main></main>
-        <footer></footer>
+        
+        <footer>
+            <div class = "contenedor-footer"> <!-- div mayor que engloba todo el footer-->
+                <div class = "logo-footer">Explora más feeds</div> <!-- div con el logo de la página-->
+
+                <div class = "columna-footer"> <!--primera columna-->
+                    <h4>Ciencias Exactas e Ingenierías</h4>
+                    <ul> <!--lista no ordenada de la primera columna con sus elementos-->
+                        <li><a href="">Matemáticas y Tecnología</a></li>
+                        <li><a href="">Ingenierías y Desarrollo</a></li>
+                        <li><a href="">Ingeniería Química y Procesos</a></li>
+
+                    </ul>
+                </div>
+
+                <div class = "columna-footer"> <!--segunda columna-->
+                    <h4>Arquitectura, Hábitat, Arte y Diseño</h4>
+                    <ul>
+                        <li><a href="">Arquitectura</a></li>
+                        <li><a href="">Entorno y Hábitat</a></li>
+                        <li><a href="">Arte y Cultura</a></li>
+                    </ul>
+                </div>
+
+                <div class = "columna-footer"> <!--tercera columna-->
+                    <h4>Ciencias de la Salud</h4>
+                    <ul>
+                        <li><a href="">Medicina y Salud</a></li>
+                        <li><a href="">Enfermería</a></li>
+                        <li><a href="">Odontología</a></li>
+                        <li><a href="">Investigación Científica</a></li>
+                    </ul>
+                </div>
+                <!--los elementos de las listas son placeholders y pueden ser cambiados a futuro-->
+                <!--se le aplicará flexbox para desplegarlos de forma horizontal en la página-->
+            </div>
+
+
+        </footer>
 
         <script src="JS/index.js"></script>
     </body>
