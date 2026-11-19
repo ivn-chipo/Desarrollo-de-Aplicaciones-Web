@@ -18,7 +18,7 @@ main {
 /*-------------------*/
 #noticiaReciente {
     width: 70vw;
-    height: 35vw;
+    min-height: 35vw;
     border: 5px solid black;
     margin: 0 auto;
 }
